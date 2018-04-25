@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Grid</title>
+	<style type="text/css">
+		h2{
+			font-size: 15px;
+		}
+		li{
+			font-size: 13px;
+		}
+		.container {
+			display: grid;
+			grid-template-columns: 1.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.6fr;
+			grid-auto-rows: minmax(30px, auto);
+			
+		}
+
+		.logo {
+			
+			padding-left: 10px;
+			grid-column-start: 1;
+			grid-column-end: 13;
+			border-radius: 25px;
+   			border: 2px solid #f4f4f4;
+    		padding: 20px; 
+    		width: 97%;
+
+		}
+
+		.container > div {
+			text-align: center;
+			font-family: Tahoma;
+			padding-top: 5px;
+			
+		}
+ 
+		.cari {
+			grid-column-start: 2;
+			grid-column-end:6;
+			grid-row-start:2;
+			grid-row-end: 3; 
+			background-color: #f4f4f4;
+			margin-top: 10px;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+    		padding: 20px; 
+    		width: 90%;
+    		height: 30px;
+			padding-left: 50px;
+		}
+		.iklan {
+			grid-column-start: 2;
+			grid-column-end:6;
+			grid-row-start:3;
+			grid-row-end:5;
+			padding: 10px;
+			margin-top: 10px;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 20px; 
+    		width: 94%; 
+		}
+		.side {
+			grid-row-start: 2;
+			grid-row-end: 8;
+			grid-column-start:6;
+			grid-column-end:9; 
+			border:1px solid;
+			margin-top: 10px;
+			margin-left: 30px;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 20px; 
+    		width: 10/0px;
+			font-family: serif;
+			color:#73AD21;
+		}
+		.side1 {
+			grid-column-start: 1;
+			grid-column-end:2;
+			grid-row-start: 4;
+			grid-row-end:8;
+			margin-top: 10px;
+			margin-right: 40px;	
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 20px; 
+    		width: 350px;
+		}
+		.side1, .login {
+			margin-right: 40px;
+		}
+		.login {
+			margin-top: 5px;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 4;
+			background-color: #f4f4f4;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 20px; 
+    		width: 350px;
+		}
+		.foto1{
+			margin: 3px;
+			grid-row-start:5;
+			grid-row-end:6;
+			grid-column-start: 2;
+			grid-column-end: 3;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 10px; 
+    		width: 150px;
+    		height: 100px; 
+		}
+		.foto2{
+			margin: 5px;
+			grid-row-start:5;
+			grid-row-end:6;
+			grid-column-start: 3;
+			grid-column-end: 4;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 10px; 
+    		width: 150px;
+    		height: 100px; 
+		}
+		.foto3{
+			margin: 5px;
+			grid-row-start:5;
+			grid-row-end:6;
+			grid-column-start: 4;
+			grid-column-end: 5;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 10px; 
+    		width: 150px;
+    		height: 100px; 
+		}
+		.foto4{
+			margin: 5px;
+			grid-row-start:5;
+			grid-row-end:6;
+			grid-column-start: 5;
+			grid-column-end: 6;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 10px; 
+    		width: 150px;
+    		height: 100px; 
+		}
+		.foto5{
+			margin: 3px;
+			grid-row-start:6;
+			grid-row-end:7;
+			grid-column-start: 2;
+			grid-column-end: 3;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 10px; 
+    		width: 150px;
+    		height: 100px; 
+		}
+		.foto6{
+			margin: 5px;
+			grid-row-start:6;
+			grid-row-end:7;
+			grid-column-start: 3;
+			grid-column-end: 4;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 10px; 
+    		width: 150px;
+    		height: 100px; 
+		}
+		.foto7{
+			margin: 5px;
+			grid-row-start:6;
+			grid-row-end:7;
+			grid-column-start: 4;
+			grid-column-end: 5;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 10px; 
+    		width: 150px;
+    		height: 100px; 
+		}
+		.foto8{
+			margin: 5px;
+			grid-row-start:6;
+			grid-row-end:7;
+			grid-column-start: 5;
+			grid-column-end: 6;
+			border-radius: 25px;
+    		border: 2px solid #f4f4f4;
+   			padding: 10px; 
+    		width: 150px;
+    		height: 100px; 
+		}
+		a{
+			color:#73AD21; 
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="logo"><a href="#"><img src="logo.jpg" width="150"></a></div>
+		<div class="login">
+			<form>
+			<fieldset>
+				<legend align="right">Login</legend>
+				<table>
+					<tr>
+						<td>Email</td>
+						<td>:</td>
+						<td><input type="text" name="email"></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td>:</td>
+						<td><input type="text" name="pass"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="checkbox" name="remember"></td>
+						<td>Remember me</td>
+					<tr>
+						<td></td>
+						<td></td>
+						<td><button>Login</button></td>
+					</tr>
+					</tr>
+				</table>
+			</fieldset>	
+			</form>
+		</div>
+		<div class="cari">
+			<table>
+				<tr>
+					<td width="200"><select>
+						<option value="Produk"> Produk</option>
+					</select></section></td>
+					<td width="200"><select>
+						<option value="kategori"> All Categories </option>
+					</select></td>
+					<td width="100"><input type="text" name="cari"></td>
+					<td></td>
+					<td><a href="#"><img src="cari.png" width="150"></a></td>
+				</tr>
+			</table>
+		</div>
+		<div class="side">
+			<h2>Kategori</h2>
+				<ul>
+					<a href="#"><li>Pakaian</li></a>
+					<a href="#"><li>Celana</li></a>
+					<a href="#"><li>Tas</li></a>
+					<a href="#"><li>Sandal</li></a>
+					<a href="#"><li>Carier</li></a>
+					<a href="#"><li>Tenda</li></a>
+					<a href="#"><li>Ponco</li></a>
+					<a href="#"><li>Alat</li></a>
+					<a href="#"><li>Handphone</li></a>
+					<a href="#"><li>Laptop</li></a>
+					<a href="#"><li>Komputer</li></a>
+					<a href="#"><li>Headset</li></a>
+					<a href="#"><li>Meja</li></a>
+					<a href="#"><li>Perabotan</li></a>
+					<a href="#"><li>Makanan</li></a>
+					<a href="#"><li>Minuman</li></a>
+					<a href="#"><li>Camilan</li></a>
+					<a href="#"><li>Buku</li></a>
+					<a href="#"><li>Bolpoint</li></a>
+					<a href="#"><li>Pensil</li></a>
+					<a href="#"><li>Penghapus</li></a>
+					<a href="#"><li>Jersey</li></a>
+					<a href="#"><li>Bola</li></a>
+					<a href="#"><li>Raket</li></a>
+					<a href="#"><li>Jam</li></a>
+					<a href="#"><li>CCTV</li></a>
+					<a href="#"><li>Helmet</li></a>
+					<a href="#"><li>Motor</li></a>
+					<a href="#"><li>Mobil</li></a>
+					<a href="#"><li>Bus</li></a>
+					<a href="#"><li>Kereta</li></a>
+					<a href="#"><li>Beca</li></a>
+					<a href="#"><li>Pesawat</li></a>
+				</ul>
+		</div>
+		<div class="side1"> 
+		<img src="iklan1.jpg" width="350">
+		<img src="iklan2.jpg" width="350">
+		</div>
+		<div class="iklan"> 
+		 	<img src="iklan3.jpg" width="580" height="200" align="center">
+		  </div>
+		<div class="foto1"><img src="produk1.jpg" width="150" height="100"></div>
+		<div class="foto2"><img src="produk2.jpg" width="150" height="100"></div>
+		<div class="foto3"><img src="produk3.jpg" width="150" height="100"></div>
+		<div class="foto4"><img src="produk4.jpg" width="150" height="100"></div>
+		<div class="foto5"><img src="produk5.jpg" width="150" height="100"></div>
+		<div class="foto6"><img src="produk6.jpg" width="150" height="100"></div>
+		<div class="foto7"><img src="produk7.jpg" width="150" height="100"></div>
+		<div class="foto8"><img src="produk8.jpg" width="150" height="100"></div>
+	</div>
+</body>
+</html> 
